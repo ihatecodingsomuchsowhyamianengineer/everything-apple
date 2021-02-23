@@ -64,14 +64,9 @@ public class SurvivalEssentials implements ModInitializer {
             .sounds(BlockSoundGroup.GRASS)
             .strength(1, 0.6f));
 
-    public static final Block APPLE_SAPLING = new AppleSaplingBlock(new AppleSaplingGenerator(), AbstractBlock.Settings.of(Material.PLANT)
-            .nonOpaque().noCollision().ticksRandomly().breakInstantly()
+    public static final SESaplingBlock APPLE_SAPLING = new SESaplingBlock(new AppleSaplingGenerator(), AbstractBlock.Settings.of(Material.PLANT)
+            .ticksRandomly().nonOpaque().noCollision().ticksRandomly().breakInstantly()
             .sounds(BlockSoundGroup.GRASS));
-
-    public static final Block APPLE_LOG = new AppleLogBlock(FabricBlockSettings.of(Material.WOOD)
-            .breakByHand(true)
-            .sounds(BlockSoundGroup.WOOD)
-            .strength(3, 3.0f));
 
     //mushrooms
     public static final Block FAERY_MUSHROOM = new FaeryMushroomBase(FabricBlockSettings.of(Material.PLANT)
@@ -177,9 +172,6 @@ public class SurvivalEssentials implements ModInitializer {
         //Saplings
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "apple_sapling"), APPLE_SAPLING);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "apple_sapling"), new BlockItem(APPLE_SAPLING, new Item.Settings().group(ItemGroup.DECORATIONS)));
-        //Logs
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "apple_log"), APPLE_LOG);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "apple_log"), new BlockItem(APPLE_LOG, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
         //mushrooms
         //Faery Mushroom
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "faery_mushroom"), FAERY_MUSHROOM);
