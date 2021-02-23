@@ -9,8 +9,4 @@ public class SESaplingBlock extends SaplingBlock {
     public SESaplingBlock(SaplingGenerator generator, Settings settings) {
         super(generator, settings);
     }
-
-    public SESaplingBlock(SaplingGenerator generator) {
-        this(generator, Settings.copy(Blocks.OAK_SAPLING));
-    }
 }
